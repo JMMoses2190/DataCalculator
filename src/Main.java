@@ -11,15 +11,40 @@ public class Main {
     //Reads data from Data.txt, edit data in file to current data set
     File file = new File("Data.txt");
     Scanner scan = new Scanner(file);
+    Scanner opt = new Scanner(System.in);
 
-    while (scan.hasNext()) {
-      //Reads next data point
-      double data = scan.nextDouble();
-      System.out.print(" " + data);
-      //Edit operations to preform equation needed for assignment
-      //double ans = data - 22;
-      double ans = log(data);
-      System.out.println(" " + ans);
+    //Reads next data point
+
+    System.out.println("What operation would you like to compute?");
+    System.out.println("Subtract by specific integer: 1");
+    System.out.println("Natural log of data: 2");
+    int option = opt.nextInt();
+    switch (option) {
+      case (1):
+        int sub;
+        System.out.println("what would you like to subtract from data?");
+        sub = opt.nextInt();
+        while (scan.hasNext()) {
+          double data = scan.nextDouble();
+          System.out.print(" " + data);
+          double ans = data - sub;
+          System.out.println(" " + ans);
+
+        }
+        break;
+      case (2):
+        while (scan.hasNext()) {
+          double data = scan.nextDouble();
+          System.out.print(" " + data);
+          double ans = log(data);
+          System.out.println(" " +ans);
+
+        }
+        break;
+      default:
+        System.out.println("Error Invalid input");
     }
+
+
   }
 }
