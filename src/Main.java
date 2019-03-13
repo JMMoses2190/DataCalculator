@@ -18,13 +18,14 @@ public class Main {
     System.out.println("What operation would you like to compute?");
     System.out.println("Subtract by specific integer: 1");
     System.out.println("Add by specific integer: 2");
-    System.out.println("Natural log of data: 3");
+    System.out.println("Multiply by specific integer: 3");
+    System.out.println("Natural log of data: 4");
     int option = opt.nextInt();
     switch (option) {
       case (1):
-        int sub;
+        double sub;
         System.out.println("What would you like to subtract from data?");
-        sub = opt.nextInt();
+        sub = opt.nextDouble();
         while (scan.hasNext()) {
           double data = scan.nextDouble();
           System.out.print(" " + data + " - " + sub);
@@ -34,9 +35,9 @@ public class Main {
         }
         break;
       case (2):
-        int add;
+        double add;
         System.out.println("What would you like to add to data?");
-        add = opt.nextInt();
+        add = opt.nextDouble();
         while (scan.hasNext()) {
           double data = scan.nextDouble();
           System.out.print(" " + data + " + " + add);
@@ -45,8 +46,18 @@ public class Main {
 
         }
         break;
-
       case (3):
+        double mult;
+        System.out.println("What would you like to multiply data by?");
+        mult = opt.nextDouble();
+        while (scan.hasNext()) {
+          double data = scan.nextDouble();
+          System.out.print(" " + data + " * " + mult);
+          double ans = data * mult;
+          System.out.println(" = " + ans);
+        }
+
+      case (4):
         while (scan.hasNext()) {
           double data = scan.nextDouble();
           System.out.print("Ln(" + data + ")");
