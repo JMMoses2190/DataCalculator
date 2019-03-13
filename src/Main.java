@@ -26,18 +26,18 @@ public class Main {
         sub = opt.nextInt();
         while (scan.hasNext()) {
           double data = scan.nextDouble();
-          System.out.print(" " + data);
+          System.out.print(" " + data + " - " + sub);
           double ans = data - sub;
-          System.out.println(" " + ans);
+          System.out.println(" = " + ans);
 
         }
         break;
       case (2):
         while (scan.hasNext()) {
           double data = scan.nextDouble();
-          System.out.print(" " + data);
+          System.out.print("Ln(" + data + ")");
           double ans = log(data);
-          System.out.println(" " +ans);
+          System.out.println(" = " + ans);
 
         }
         break;
