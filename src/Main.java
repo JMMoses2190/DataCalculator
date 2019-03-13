@@ -17,12 +17,13 @@ public class Main {
 
     System.out.println("What operation would you like to compute?");
     System.out.println("Subtract by specific integer: 1");
-    System.out.println("Natural log of data: 2");
+    System.out.println("Add by specific integer: 2");
+    System.out.println("Natural log of data: 3");
     int option = opt.nextInt();
     switch (option) {
       case (1):
         int sub;
-        System.out.println("what would you like to subtract from data?");
+        System.out.println("What would you like to subtract from data?");
         sub = opt.nextInt();
         while (scan.hasNext()) {
           double data = scan.nextDouble();
@@ -33,6 +34,19 @@ public class Main {
         }
         break;
       case (2):
+        int add;
+        System.out.println("What would you like to add to data?");
+        add = opt.nextInt();
+        while (scan.hasNext()) {
+          double data = scan.nextDouble();
+          System.out.print(" " + data + " + " + add);
+          double ans = data + add;
+          System.out.println(" = " + ans);
+
+        }
+        break;
+
+      case (3):
         while (scan.hasNext()) {
           double data = scan.nextDouble();
           System.out.print("Ln(" + data + ")");
